@@ -11,7 +11,7 @@ pipeline{
       
       stage("test"){
          steps{
-         eccho 'testing the application'
+         echo 'testing the application'
          }
       }
       
