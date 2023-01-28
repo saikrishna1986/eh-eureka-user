@@ -5,6 +5,7 @@ pipeline{
    stages{
       stage("build"){
         steps { 
+           checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'Github', url: 'https://github.com/saikrishna1986/eh-eureka-user.git']]])
           echo 'executing gradle ...'
         }
       }
